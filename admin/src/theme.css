@@ -1,0 +1,97 @@
+:root {
+    /* Brand Colors Extracted from THSTI public site */
+    --primary: #9d302b;
+    --secondary: #001e57;
+    --accent: #df6512;
+    --bg-body: #ffffff;
+    --bg-light: #f3f5f9;
+
+    /* Text Colors */
+    --text-main: #555555;
+    --text-muted: #787878;
+    --text-dark: #222222;
+
+    /* UI Metrics */
+    --radius-btn: 3px;
+    --radius-card: 5px;
+    --border-light: #e5e7eb;
+}
+
+body {
+    font-family: "Familjen Grotesk", sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+/* Button Overrides */
+.admin-btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border-radius: var(--radius-btn);
+    padding: 10px 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.admin-btn-primary:hover {
+    background-color: var(--secondary);
+}
+
+.admin-btn-accent {
+    background-color: var(--accent);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border-radius: var(--radius-btn);
+    padding: 13px 33px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.admin-btn-accent:hover {
+    background-color: var(--text-dark);
+}
+
+.admin-card {
+    background-color: var(--bg-body);
+    border-radius: var(--radius-card);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-light);
+}
+
+.admin-input {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-btn);
+    padding: 8px 12px;
+    font-family: inherit;
+    color: var(--text-main);
+    width: 100%;
+}
+
+.admin-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Custom Webkit Scrollbar for Sidebar/Internal panes */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,103 @@
+/* Global styles will be imported here */
+
+/* =========================================
+   What's New / Marquee Strip (fixed-bottom)
+   ========================================= */
+.whats-new-strip {
+    padding: 2px 64px;
+    background-color: #9d302b;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: auto;
+    transition: bottom 0.2s ease;
+    padding-right: 90px; /* clear space for back-to-top button */
+}
+
+.whats-new-strip .annoucement-box h2.h3 {
+    color: #222222;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 18px;
+    margin: 0;
+    background-color: #fff;
+    white-space: pre;
+    padding: 0.5rem;
+}
+
+.whats-new-strip .marquee-container {
+    padding-left: 16px;
+}
+
+.whats-new-strip marquee a.h3.pointer {
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    padding: 10px 50px 0 0;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0;
+    transition: opacity 0.2s;
+}
+
+.whats-new-strip marquee a.h3.pointer:hover {
+    opacity: 0.8;
+}
+
+.whats-new-strip .play-pause-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* Scroll-To-Top button styling to match design6 interaction */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #1b1a1c;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    z-index: 99999 !important;
+    transition: all 300ms ease;
+    /* hide by default, React will handle display via inline style */
+    display: none;
+}
+
+.scroll-to-top:hover {
+    background: #df6512;
+}
+
+@media (max-width: 576px) {
+    .whats-new-strip {
+        height: auto;
+        padding: 8px 12px;
+    }
+    .whats-new-strip .annoucement-box {
+        min-width: 90px;
+        padding-right: 10px;
+    }
+    .whats-new-strip .annoucement-box h2 {
+        font-size: 0.8rem;
+    }
+    .whats-new-strip marquee a {
+        font-size: 0.85rem;
+    }
+}

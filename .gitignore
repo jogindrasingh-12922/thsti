@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# .NET
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Vite / React / Build outputs
+dist/
+dist-ssr/
+*.local
+.eslintcache
+.stylelintcache
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
