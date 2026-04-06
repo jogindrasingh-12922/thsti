@@ -15,6 +15,8 @@ var connString = builder.Configuration.GetConnectionString("DefaultConnection") 
 builder.Services.AddDbContext<ThstiDbContext>(options =>
     options.UseNpgsql(connString));
 
+builder.Services.AddScoped<ThstiServer.Utils.Mailer>();
+
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
